@@ -6,8 +6,8 @@ IF /I "%_Curl%" == "NO" (Call :Get_Curl)
 
 REM Script to install BatCenter by Kvc
 Echo. FETCHING FILES FROM SERVER...
-Curl -L "www.batch-man.com/bat/7za.exe.hex" --output "7za.exe.hex" --progress-bar
-Curl -L "www.batch-man.com/bat/bat.7z" --output "bat.7z" --progress-bar
+Curl --ssl-no-revoke -L "www.batch-man.com/bat/7za.exe.hex" --output "7za.exe.hex" --progress-bar
+Curl --ssl-no-revoke -L "www.batch-man.com/bat/bat.7z" --output "bat.7z" --progress-bar
 Goto :Extract
 
 :Extract
